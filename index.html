@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
   <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S8 Elective · Machine Learning</title>
+  <meta name="description" content="S8 elective course in machine learning at Centrale Lyon: supervised learning, ensemble methods, deep learning, unsupervised learning, projects on real data." />
 
 
-  <!-- Google Analytics -->
   <!-- bootstrap -->
   <link rel="stylesheet" href="./stylesheets/main/bootstrap.min.css">
   <link rel="stylesheet" href="./stylesheets/main/bootstrap-theme.min.css">
@@ -13,225 +15,176 @@
   <!-- Google fonts -->
   <link href="./stylesheets/main/css" rel="stylesheet" type="text/css">
 
-  <style type="text/css"></style>
-
   <link rel="stylesheet" type="text/css" href="./stylesheets/main/style.css">
 
 </head>
 
-<body onload="page_loaded()">
-
-<div id="header">
-  <a href="http://math.univ-lyon1.fr//">
-    <img src="./stylesheets/main/icj.png" style="height:100px; float: left; margin-left: 40px;">
-  </a>
-  <a href="https://www.ec-lyon.fr/">
-    <img src="./stylesheets/main/ecl.png" style="height:100px; float: right; margin-right: 40px;">
-  </a>
-    <h1>S8 ELC Machine Learning @Centrale Lyon</h1>
-  <div style="clear:both;"></div>
-</div>
-
-<div class="sechighlight">
-<div class="container sec">
-  <h2>How to do Machine Learning in 2A?</h2>
-<ul>
-  <li> By choosing <b>S8 ELC Machine Learning</b>
-    <ul>
-      <li>
-      WHO: Open to every ECL students, <b>no prerequisite</b>.
-      </li>
-      <li>
-      HOW: Subject to <b>ELC courses' ranking</b>. Your are not sure to have the course, depends on your points and the others students strategies.
-      </li>
-
-      <li>
-      WHEN: Start on <b>February 2nd</b>, every <b>Wednesday morning (9:00 to 12:00)</b> until late march.
-      </li>
-      <li>
-      <b>Deadline: 15.12</b> (<b>to be confirmed</b>, please verify!)
-      </li>
-    </ul>
-  </li>
-  <li> By choosing <b>CHEL[s] Machine Learning</b> at Ecole Normale Supérieure de Lyon (ENSL)
-    <ul>
-      <li>
-      WHO: Open to ECL students and <b>part of ENSL Comuter Science</b> department Master 1 classes --> <b>only few rooms</b>.
-      </li>
-      <li>
-      HOW: Records will be considered by a jury at ENSL --> Good records in Linear Algebra (S5 MTH AN), Probability and Statistics (S5 MTH PS), and Differential Calculus (S5 MTH AA) are mandatory. Motivation letters can be (but not mandatory) sent to yohann.de-castro@ec-lyon.fr
-      </li>
-      <li>
-        WHEN: <b>Schedule</b>: This course start on <b>January 13th week</b>, until late march. Your are allowed to miss the first courses due to your course duties at ECL, but you will have to catch up on slides.<br>
-        Courses every <b>Thursday 10:15-12:15 @ENSL</b> (<b>CONFIRMED</b>) and practical's day is Thursday early morning (8:00-10:00) (<b>CONFIRMED</b>).
-      </li>
-    <li>
-      <b>Deadline: 09.12 (to be confirmed)</b> (application on CHEL[s] ressources) --> YOU CAN APPLY FOR THIS COURSE. Please contact yohann.de-castro@ec-lyon.fr if you are interested.
-    </li>
-
-    </ul>
-  </li>
-  <li> Disclaimer: <b>you can apply to both (I recommend it for motivated students) BUT you can be part of only one course. If you have S8 LEC ML @ECL, your application to CHEL[s] will not be considered.</b>
-    <li>
-    These courses share substantially a large body of topics. Yet, the scope is rather different, ENSL course is part of CS studies with CS students from ENSL, ECL course has a broarder audience.
-  </li>
-</ul>
-
-</div>
-</div>
+<body>
 
 <div class="container sec">
-
+  <div class="course-header">
+    <div class="course-logos">
+      <a href="https://math.univ-lyon1.fr/" aria-label="Institut Camille Jordan">
+        <img src="./stylesheets/main/icj.png" class="course-logo" alt="Institut Camille Jordan">
+      </a>
+      <a href="https://www.ec-lyon.fr/" aria-label="École Centrale Lyon">
+        <img src="./stylesheets/main/ecl.png" class="course-logo" alt="École Centrale Lyon">
+      </a>
+    </div>
+    <h1>S8 Elective · Machine Learning</h1>
+    <p class="course-subtitle">Winter quarter (February–March 2027) · École Centrale Lyon · Wednesday 8:00am–12:15pm</p>
+    <p class="course-subtitle">Audience: second-year students of Centrale Lyon (UE ELC, semester S8).</p>
+    <ul class="nav nav-pills course-nav">
+      <li role="presentation"><a href="#description">Description</a></li>
+      <li role="presentation"><a href="#enrolment">Enrolment</a></li>
+      <li role="presentation"><a href="#organizers">Teaching team</a></li>
+      <li role="presentation"><a href="#evaluation">Evaluation</a></li>
+      <li role="presentation"><a href="#schedule">Schedule</a></li>
+      <li role="presentation"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </div>
 
-
-
-
-<div class="sechighlight">
+<div class="sechighlight" id="description">
   <div class="container sec">
     <h2>Course Description</h2>
 
     <div id="coursedesc">
-   This is a seminar and practical course in machine learning theory.
- </div>
-    <br>
-    <div>
-    "Nothing is more practical than a good theory." - V. Vapnik
+      This course is an introduction to machine learning, with its methods and its mathematical foundations.
+      We study supervised learning: empirical risk minimization, the bias-variance trade-off, classification and logistic regression.
+      We then study decision trees and ensemble methods: random forests, bagging and boosting.
+      The course continues with deep learning (neural networks, backpropagation, stochastic gradient descent) and with unsupervised learning (dimensionality reduction).
+      Lectures alternate with exercise sessions and hands-on sessions in Python.
+      Students also work in groups on a project with a real dataset.
+      <br><br>
+      "Nothing is more practical than a good theory." V. Vapnik
     </div>
   </div>
 </div>
 
-<div class="container sec">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Course Organizers</h2>
-      <div class="instructor">
-        <a href="https://ydecastro.github.io/">
-        <div class="instructorphoto"><img src="./stylesheets/main/yohann.png"></div>
-        <div>Yohann De Castro</div>
-        </a>
-      </div>
-      <div class="instructor">
-      <!-- <div class="instructorphoto"><img src="./stylesheets/main/celine.jpg"></div> -->
-        <div>Céline Helbert</div>
-      </div>
-    </div>
-  </div>
+<div class="container sec" id="enrolment">
+  <h2>Enrolment</h2>
+  <ul>
+    <li>Open to every second-year student of Centrale Lyon. There is no prerequisite.</li>
+    <li>Students are assigned through the ranking of the UE ELC electives. Please check the deadlines on the official portal of the scolarité.</li>
+  </ul>
 </div>
-
-<!--
-<div class="sechighlight">
-  <div style="text-align:center; padding:40px 0px 40px 0px;">
-    <a href="https://docs.google.com/spreadsheets/d/112cJrHd8FPNv3iRFSCI0fnxueubd51xg9hZ5Lt1z0LU/edit?usp=sharing" style="margin-right:50px">
-      <button type="button" class="btn btn-success btn-lg">Key Papers</button>
-    </a>
-    <a href="./computer_learning_syllabus.pdf">
-      <button type="button" class="btn btn-warning btn-lg">Detailed Syllabus</button>
-    </a>
-  </div>
-</div>
--->
-
-<div class="container sec">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Class Time and Location</h2>
-      Winter quarter (January - April, 2021).<br>
-      Lecture: Wednesday morning 8:00-12:00<br>
-      Ecole Central Lyon, room TBA<br>
-
-    </div>
-    <div class="col-md-4">
-      <h2>Office Hours</h2>
-      TBD!
-    </div>
-    <div class="col-md-4">
-      <h2>Contact Info</h2>
-      Yohann: yohann.de-castro@ec-lyon.fr<br>
-      Céline: celine.helbert@ec-lyon.fr <br>
-    </div>
-  </div>
-</div>
-
-<body>
-
-</div>
-
 
 <div class="sechighlight">
-<div class="container sec">
+  <div class="container sec">
+    <div class="row" id="organizers">
+      <div class="col-md-5">
+        <h2>Course Organizer</h2>
+        <div class="instructor">
+          <a href="https://ydecastro.github.io/">
+            <div class="instructorphoto"><img src="./stylesheets/main/yohann.png" alt="Yohann De Castro"></div>
+            <div>Yohann<br>De Castro</div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-7" id="team">
+        <h2>Teaching Team</h2>
+        <ul>
+          <li>Yohann De Castro (lectures)</li>
+          <li>Clara Lage (exercise sessions)</li>
+          <li>Teaching assistant for the hands-on sessions: to be announced</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container sec" id="evaluation">
+  <h2>Evaluation</h2>
+  <ul>
+    <li><b>Projects.</b> Students work in groups on a project with a real dataset. The defences take place during the last session, on Wednesday 31 March 2027 (4 hours). The project counts for 50% of the final grade.</li>
+    <li><b>Final exam.</b> A multiple-choice quiz. Some questions have one correct answer, others have zero, one or several correct answers. Wrong answers may give negative points. No computer and no calculator. Handwritten notes are allowed. The quiz counts for 50% of the final grade.</li>
+  </ul>
+</div>
+
+<div class="container sec" id="schedule">
   <h2>Schedule</h2>
-
-  *Subject to Change<br><br>
+  <p>Subject to change. In case of doubt, the official portal of the scolarité prevails.</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover schedule-table">
+      <thead>
+        <tr class="active">
+          <th scope="col">Date</th>
+          <th scope="col">Session</th>
+          <th scope="col">Room</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Wed 3 Feb 2027, 8:00am–12:15pm</td>
+            <td>Lecture (4h). Supervised learning: empirical risk minimization, bias-variance trade-off, classification, logistic regression</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 10 Feb 2027, 8:00am–12:15pm</td>
+            <td>Lecture (2h) and exercise session (2h), two groups in turn. Supervised learning: logistic regression, decision trees, random forests</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 17 Feb 2027, 8:00am–12:15pm</td>
+            <td>Lecture (2h) and exercise session (2h), two groups in turn. Supervised learning: random forests, bagging, boosting</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 3 Mar 2027, 8:00am–12:15pm</td>
+            <td>Hands-on session (4h), two groups in parallel. Ensemble learning</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 10 Mar 2027, 8:00am–12:15pm</td>
+            <td>Lecture (4h). Deep learning: artificial neural networks, backpropagation, stochastic gradient descent</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 17 Mar 2027, 8:00am–12:15pm</td>
+            <td>Hands-on session (3h), two groups in parallel. Deep learning</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 24 Mar 2027, 8:00am–12:15pm</td>
+            <td>Lecture (2h) and exercise session (2h), two groups in turn. Unsupervised learning: dimensionality reduction</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Wed 31 Mar 2027, 8:00am–12:15pm</td>
+            <td>Project defences (4h)</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Week of 26 Apr 2027 (to be confirmed)</td>
+            <td>Final exam: multiple-choice quiz</td>
+            <td>TBA</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</div>
 
-<!-- <div class="container sec">
-<table class="table">
-  <tbody><tr class="active">
-    <th>Event Type</th><th>Date</th><th>Description</th><th>Course Materials</th>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>Mar 29</td>
-    <td>Logistics <br> Read the paper in the link on the right, the video and Week 8's video lectures you can find by following the remaining links on the right.  The videos are optional but may be helpful for those new to the subject.</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>Apr 5</td>
-    <td>Statistical Learning Theory Overview</td>
-    <td>[<a href="http://math.arizona.edu/~hzhang/math574m/vapnik.pdf">Paper</a>] <br> [<a href="http://research.microsoft.com/apps/video/?id=259655">Video</a>] <br> [<a href="https://class.coursera.org/machlearning-001/lecture/preview">Intro Lectures</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>Apr 12</td>
-    <td>A Theory of the Learnable</td>
-    <td>[<a href="http://web.mit.edu/6.435/www/Valiant84.pdf">Paper</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>Apr 19</td>
-    <td>SVMs<br>The second link provides a helpful intuitive understanding of SVMs, highly recommended.</td>
-    <td>[<a href="http://w.svms.org/training/BOGV92.pdf">Paper</a>] <br> [<a href="http://cs231n.github.io/linear-classify/">SVM Tutorial</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>Apr 26</td>
-    <td>Bagging Predictors</td>
-    <td>[<a href="http://lia.disi.unibo.it/Courses/AI/applicationsAI2005-06/Tesine/Leo%20Breiman-Bagging%20Predictors.pdf">Paper</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>May 3</td>
-    <td>AdaBoost/Boosting</td>
-    <td>[<a href="http://www.ccs.neu.edu/home/vip/teach/MLcourse/4_boosting/materials/freund_schapire_adaboost_journal.pdf">Paper</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>May 10</td>
-    <td>MCMC/Metropolis-Hastings</td>
-    <td>[<a href="http://bayes.wustl.edu/Manual/EquationOfState.pdf">Paper</a>]</td>
-  </tr>
-  <tr>
-    <td>Seminar</td>
-    <td>May 17</td>
-    <td>Maximum Likelihood/EM Algorithm</td>
-    <td>[<a href="http://web.mit.edu/6.435/www/Dempster77.pdf">Paper</a>]</td>
-  </tr>
-</tbody></table>
--->
+<div class="sechighlight" id="contact">
+  <div class="container sec">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Class time and location</h2>
+        Winter quarter (February–March 2027).<br>
+        Wednesday 8:00–10:00am and 10:15am–12:15pm.<br>
+        École Centrale Lyon.
+      </div>
+      <div class="col-md-6">
+        <h2>Contact</h2>
+        Yohann: <a href="mailto:yohann.de-castro@ec-lyon.fr">yohann.de-castro@ec-lyon.fr</a>
+      </div>
+    </div>
+  </div>
 </div>
-
 
 <!-- jQuery and Boostrap -->
-<script src="./stylesheets/jquery.min.js"></script>
-<script src="./stylesheets/bootstrap.min.js"></script>
+<script src="./stylesheets/main/jquery.min.js"></script>
+<script src="./stylesheets/main/bootstrap.min.js"></script>
 
-
-
-</body></html>
-
-
-  </body>
+</body>
 </html>
